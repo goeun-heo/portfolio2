@@ -1,0 +1,154 @@
+#section2 {
+    background: #E8E8EA;
+
+
+}
+
+.section2 {
+    width: 100%;
+    max-width:1280px;
+    margin: 0 auto;
+
+}
+
+.section2 h2 {
+    text-transform: uppercase;
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+
+.bestlist {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bestlist li {
+    width: 22%;
+    height: 100%;
+    position: relative;
+}
+
+.bestimg {
+    width: 100%;
+    position: relative;
+    display: block;
+
+
+}
+
+ .bestlist li:nth-child(1) .bestimg {
+
+    background: url('../images/sum1.png')no-repeat center/95%
+}
+
+.bestlist li:nth-child(2) .bestimg {
+    background: url('../images/sum2.png')no-repeat center/95%
+}
+
+.bestlist li:nth-child(3) .bestimg {
+    background: url('../images/sum3.png')no-repeat center/95%
+}
+
+.bestlist li:nth-child(4) .bestimg {
+    background: url('../images/sum4.png')no-repeat center/95%
+}
+
+.bestimg::before {
+    content: "";
+    display: block;
+    padding-top: 110%;
+    background: rgba(0, 0, 0, 0.03);
+
+}
+
+.bestimg .imgover {
+    transition: .4s;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+    left: 0;
+    opacity: 0;
+}
+
+.bestimg:hover .imgover {
+    background: rgba(0, 0, 0, 0.53);
+    opacity: 1;
+
+}
+
+.imgover span {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.imgover span img {
+    width: 50px;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.besttxt1 {
+    padding: 20px 0;
+    border-bottom: 1px solid #1c1b1b;
+    display: block;
+}
+
+.besttit {
+    font-size: 14px;
+
+    display: inline-block;
+    width: calc(100% - 80px);
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+
+}
+
+.bestprice {
+    position: absolute;
+    right: 0;
+    text-align: right;
+}
+
+.bestadd {
+    display: block;
+    font-size: 13px;
+    text-align: right;
+    width: 100%;
+    border-bottom: 2px solid #1c1b1b;
+    padding: 20px 0;
+    font-weight: 800;
+}
+
+
+
+#section5 {
+    background: #E8E8EA;
+
+
+}
+
+.section5 {
+    width: 100%;
+    max-width:1280px;
+    margin: 0 auto;
+
+}
+
+.section5 h2 {
+    text-transform: uppercase;
+    font-weight: 800;
+    padding-bottom: 20px;
+}

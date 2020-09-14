@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+    color: #1c1b1b;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    border: 3px solid #fff;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+    height: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+    background: #efefef;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, .2)
+}
+
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    width: 50px;
+    background: rgba(0, 0, 0, .2);
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, .1)
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+h8 {
+    font-weight: normal;
+}
+
+
+h3 {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body.on {
+    overflow: hidden;
+}
+
+/*
+body {
+    -ms-overflow-style: none;
+    
+    scrollbar-width: none;
+   
+
+}
+
+body::-webkit-scrollbar {
+    display: none;
+     
+}
+*/
+
+
+
+li {
+    list-style: none;
+    float: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clb::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.li::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.warp {
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.linesbtn {
+    border: 1px solid #1c1b1b;
+    display: inline-block;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.close {
+    z-index: 30;
+    height: 35px;
+    width: 35px;
+    display: block;
+    position: relative;
+}
+
+.close::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)rotate(-45deg);
+    width: 40px;
+    height: 2px;
+    background: #1c1b1b;
+}
+
+.close::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 40px;
+    height: 2px;
+    background: #1c1b1b;
+}
+
+/*상단바부분*/
+header {
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 20;
+}
+
+header h1{position: absolute; left: 50%;top: 50%;transform: translate(-50%,-50%)}
+.gnb {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+}
+
+.gnb li {
+    font-weight: 600;
+    font-size: 15px;
+    padding-right: 20px;
+    text-transform: capitalize;
+}
+
+
+
+
+.cart {
+    position: absolute;
+    top: 50px;
+    right: 200px;
+}
+.cart img{width: 32px;}
+
+.toggle {
+    z-index: 70;
+    position: fixed;
+    top: 50px;
+    right: 100px;
+    transition: .3s;
+}
+.toggle:hover {
+   opacity: .4;
+}
+
+.section1 .cart {
+    float: left;
+    position: relative;
+
+}
+
+.cart span {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    ;
+    background: rgba(72, 70, 70, 0.9);
+}
+
+.toggle {
+    z-index: 80;
+}
+
+.toggle span {
+    float: left;
+    height: 35px;
+    width: 35px;
+    display: block;
+
+    position: relative;
+}
+
+.toggle span::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 35px;
+    height: 3px;
+    background: #1c1b1b;
+    transition: all .4s;
+}
+
+.toggle span::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    transform: translateY(13px);
+    width: 20px;
+    height: 3px;
+    background: #1c1b1b;
+    transition: .2s;
+}
+
+.toggle.on span {}
+
+.toggle.on span::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0%)rotate(-45deg);
+    width: 40px;
+    height: 3px;
+    background: #1c1b1b;
+}
+
+.toggle.on span::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+    width: 40px;
+    height: 3px;
+    background: #1c1b1b;
+}
+
+
+/*메뉴부분*/
+.navwarp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.63);
+    opacity: 0;
+    transition: opacity .4s;
+    z-index: -1;
+}
+
+.navwarp.on {
+    opacity: 1;
+    z-index: 20;
+}
+
+.navwarp nav {
+    background: #fff;
+    width: 724px;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    padding: 100px;
+}
+
+.search {
+    margin-top: 50px;
+    height: 80px;
+    border-bottom: 2px solid #1c1b1b;
+    position: relative;
+}
+
+.search input {
+    height: 100%;
+    border: 0;
+    background: rgba(153, 153, 153, 0.01);
+}
+
+.search input {
+    width: calc(100% - 60px);
+    position: absolute;
+    padding: 0 20px;
+    right: 0;
+    font-size: 20px;
+
+
+}
+
+.search button {
+    position: absolute;
+    top: 50%;
+    margin-left: 10px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+
+
+
+}
+
+.search button::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/search_icon.png) no-repeat center/100%;
+}
+
+.allmenu {
+    text-transform: capitalize;
+    padding-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.allmenu li {
+    clear: both;
+    width: 100%;
+}
+
+.allmenu > a:first-child {
+    font-size: 30px;
+    font-weight: 600;
+    padding: 20px 0;
+    display: block;
+}
+
+
+.allmenu dt {
+    font-size: 21px;
+    font-weight: 600;
+    padding: 20px 0;
+
+}
+
+.allmenu dl {
+    padding-top: 20px;
+}
+
+.allmenu dd {
+    font-size: 17px;
+    padding: 5px 0;
+    font-weight: 500;
+    color: rgba(28, 27, 27, 0.74);
+}
+
+.allmenu a:hover {
+    opacity: .4;
+}
+
+.allmenu a {
+    transition: .3s;
+    opacity: .9;
+}
+
+.menu1 {
+    float: left;
+    width: 50%;
+}
+
+.menu2 {
+    float: left;
+    width: 50%;
+}
+
+/*카트미리보기*/
+#cartwarp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.63);
+    transition: .4s;
+    opacity: 0;
+    z-index: -1;
+}
+
+#cartwarp.on {
+    opacity: 1;
+    z-index: 90;
+}
+
+.cartlist {
+    background: #fff;
+    width: 400px;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    position: absolute;
+    right: 0;
+    padding: 40px;
+}
+
+.carttit {
+    position: relative;
+    width: 100%;
+    top: 0px;
+    line-height: 1;
+}
+
+.carttit .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.carttit h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.cartbuy {
+    width: 100%;
+    background: #1c1b1b;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    font-size: 17px;
+    font-weight: 500;
+    opacity: .5;
+    transition: .5s;
+}
+
+.cartbuy:hover {
+    opacity: 1;
+}
+
+.cartlist ul {
+    overflow: auto;
+    height: calc(100% - 200px);
+    position: relative;
+    top: 20px;
+
+
+}
+
+.cartlist li {
+
+    clear: both;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgba(28, 27, 27, 0.51);
+    padding: 20px 0;
+    position: relative;
+}
+
+.cartlist li:last-child {
+    border-bottom: 0
+}
+
+.cartimg {
+    width: 35%;
+    float: left;
+    display: block;
+    position: relative;
+    background: url("../images/rdn-lactic-acid-5pct-ha-2pct-30ml.png") no-repeat 50% 600% / 60%;
+}
+
+.cartimg::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    background: rgba(0, 0, 0, 0.03);
+
+}
+
+.carttxt {
+    padding-left: 20px;
+    display: block;
+    float: left;
+    width: 45%;
+    line-height: 1;
+
+}
+
+.cartname {
+    font-size: 13px;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.cartprice {
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 20px;
+    display: block;
+}
+
+.amount {
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 15px;
+    display: block;
+}
+
+.amount span {
+    border: 1px solid #ddd;
+
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+    text-align: center;
+}
+
+.carttotal {
+    border-top: 2px solid #1c1b1b;
+    position: relative;
+    padding-top: 20px;
+    font-size: 21px;
+    font-weight: 600;
+    top: 50px;
+
+
+}
+
+.carttotal span {
+    position: absolute;
+    right: 0;
+}

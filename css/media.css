@@ -1,0 +1,435 @@
+@media only screen and (max-width: 500px) {
+
+
+    /* 공통*/
+    h2 {
+        font-size: 20px;
+    }
+
+    .navwarp nav {
+        background: #fff;
+        width: 100%;
+        padding: 40px;
+        height: 100%;
+        position: relative;
+
+    }
+
+    .search {
+        position: relative;
+        margin-top: 20px;
+        height: 60px;
+
+    }
+
+    .search button {
+        position: absolute;
+        top: 50%;
+        margin-left: 5px;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 25px;
+        border: 0;
+        background: rgba(0, 0, 0, 0);
+
+
+
+    }
+
+    .search button::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        width: 25px;
+        height: 25px;
+        background: url(../images/search_icon.png) no-repeat center/100%;
+    }
+
+    .allmenuwarp {
+
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+
+
+    }
+
+    .allmenu {
+
+        padding: 0px;
+        height: calc(100% - 50px);
+        width: 100%;
+
+        position: static
+    }
+
+    .allmenu > a:first-child {
+
+        font-size: 22px;
+        font-weight: 600;
+        padding: 15px 0;
+
+
+    }
+
+    .allmenu dl {
+
+        width: 100%;
+        padding-top: 0px;
+
+    }
+
+    .allmenu dt {
+        font-size: 15px;
+        font-weight: 600;
+        height: 40px;
+        padding: 0;
+        line-height: 40px;
+        border-bottom: 1px solid #1c1b1b;
+
+
+    }
+
+
+
+    .allmenu dd {
+        font-size: 13px;
+        padding-top: 0px;
+        line-height: 1.7;
+        font-weight: 500;
+        color: rgba(28, 27, 27, 0.74);
+        height: 0px;
+        overflow: hidden;
+
+
+    }
+
+    .allmenu dt:hover ~ dd {
+        padding-top: 10px;
+        height: 50px;
+
+    }
+
+    .menu2,
+    .menu1 {
+        clear: both;
+        width: 100%;
+    }
+
+    header {
+        padding: 0px;
+        height: 70px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    .gnb {
+        left: 30px
+    }
+
+    .cart {
+        position: absolute;
+        top: 30px;
+        right: 70px;
+    }
+
+    .cart img {
+        width: 25px;
+    }
+
+    .toggle {
+        z-index: 70;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+    }
+
+    /*첫번째*/
+    section {
+        padding: 30px;
+        position: relative;
+    }
+
+    .gnb li {
+        font-weight: 600;
+        font-size: 11px;
+        padding-right: 10px;
+        text-transform: capitalize
+    }
+
+    .section1 .cart img {
+        width: 20px;
+
+    }
+
+    .toggle.on span {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+    }
+
+    .toggle span {
+
+        float: left;
+        height: 20px;
+        width: 20px;
+    }
+
+    .toggle span::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 20px;
+        height: 3px;
+        background: #1c1b1b;
+        transition: all .4s;
+    }
+
+    .toggle span::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        right: 0;
+        transform: translateY(9px);
+        width: 10px;
+        height: 3px;
+        background: #1c1b1b;
+        transition: .2s;
+    }
+
+    .toggle.on span::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, 0%)rotate(-45deg);
+        width: 20px;
+        height: 3px;
+        background: #1c1b1b;
+    }
+
+    .toggle.on span::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, 0%)rotate(45deg);
+        width: 20px;
+        height: 3px;
+        background: #1c1b1b;
+    }
+
+
+
+    .msentence {
+
+        width: 100%;
+
+        justify-content: flex-end;
+
+
+    }
+
+    .msentence h3 {
+        font-size: 12px;
+    }
+
+    .direction {
+        position: relative;
+        left: 0;
+         padding: 50px 0;
+
+
+
+    }
+
+    .direction a img {
+        width: 15px;
+    }
+
+
+    .mainlogo {
+        width: 200px;
+        margin: 20px 0;
+    }
+
+    .mainline {
+
+        height: 12px;
+        background: #E8E8EA;
+        margin: 0;
+        margin-bottom: 20px;
+        width: 250px;
+
+    }
+
+
+    /*두번째페이지*/
+    .bestlist li {
+        width: 47%;
+        height: 100%;
+        position: relative;
+    }
+
+    .bestlist li:nth-child(3n) {
+        padding-top: 20px;
+    }
+
+    .bestlist li:nth-child(4n) {
+        padding-top: 20px;
+    }
+
+    .bestlist {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+    .bestadd {
+        display: block;
+        font-size: 11px;
+        text-align: right;
+        width: 100%;
+        border-bottom: 2px solid #1c1b1b;
+        padding: 10px 0;
+        font-weight: 800;
+    }
+
+    .besttit {
+        font-size: 12px;
+        width: calc(100% - 50px);
+    }
+
+    .bestprice {
+        font-size: 11px;
+    }
+
+    .besttxt1 {
+        padding: 10px 0;
+        border-bottom: 1px solid #1c1b1b;
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+    /*두번째페이지*/
+    .bestlist li {
+        width: 47%;
+        height: 100%;
+        position: relative;
+    }
+
+    .bestlist li:nth-child(3n) {
+        padding-top: 20px;
+    }
+
+    .bestlist li:nth-child(4n) {
+        padding-top: 20px;
+    }
+
+    .bestlist {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+    .bestadd {
+        display: block;
+        font-size: 11px;
+        text-align: right;
+        width: 100%;
+        border-bottom: 2px solid #1c1b1b;
+        padding: 10px 0;
+        font-weight: 800;
+    }
+
+    .besttit {
+        font-size: 12px;
+        width: calc(100% - 50px);
+    }
+
+    .bestprice {
+        font-size: 11px;
+    }
+
+    .besttxt1 {
+        padding: 10px 0;
+        border-bottom: 1px solid #1c1b1b;
+        display: block;
+    }
+
+    footer {
+        padding: 30px
+    }
+
+    .footleft {
+        clear: both;
+        width: 100%;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    .footleft img {
+        margin: 0 auto;
+        max-width: 150px;
+
+    }
+
+    .footright {
+        clear: both;
+        width: 100%;
+    }
+
+    .footer dl {
+        text-align: center
+    }
+
+    .footer dd {
+        font-size: 13px;
+        padding-bottom: 5px;
+    }
+
+    .footer dt {
+        font-size: 15px;
+        padding-bottom: 8px;
+    }
+}
+
+@media only screen and (max-width: 1460px) {
+    .reclistwarp {
+        width: 750px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .reclistwarp {
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .reclistwarp {
+        width: 250px;
+
+    }
+}
