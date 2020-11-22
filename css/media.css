@@ -6,7 +6,7 @@
         font-size: 20px;
     }
 
-    .navwarp nav {
+    .navwrap nav {
         background: #fff;
         width: 100%;
         padding: 40px;
@@ -47,7 +47,7 @@
         background: url(../images/search_icon.png) no-repeat center/100%;
     }
 
-    .allmenuwarp {
+    .allmenuwrap {
 
         width: 100%;
         height: 100%;
@@ -95,7 +95,6 @@
     }
 
 
-
     .allmenu dd {
         font-size: 13px;
         padding-top: 0px;
@@ -104,15 +103,22 @@
         color: rgba(28, 27, 27, 0.74);
         height: 0px;
         overflow: hidden;
+		transition: .4s;
 
 
     }
-
-    .allmenu dt:hover ~ dd {
+    .allmenu  dd.on {
+        font-size: 13px;
         padding-top: 10px;
+        line-height: 1.7;
+        font-weight: 500;
+        color: rgba(28, 27, 27, 0.74);
         height: 50px;
+        overflow: hidden;
+
 
     }
+
 
     .menu2,
     .menu1 {
@@ -416,19 +422,19 @@
 }
 
 @media only screen and (max-width: 1460px) {
-    .reclistwarp {
+    .reclistwrap {
         width: 750px;
     }
 }
 
 @media only screen and (max-width: 950px) {
-    .reclistwarp {
+    .reclistwrap {
         width: 500px;
     }
 }
 
 @media only screen and (max-width: 800px) {
-    .reclistwarp {
+    .reclistwrap {
         width: 250px;
 
     }

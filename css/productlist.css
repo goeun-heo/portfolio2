@@ -1,0 +1,133 @@
+.wrap2 header {
+    position: relative;
+    padding: 100px;
+    height: 150px;
+}
+
+.wrap2 header h1 {
+    position: absolute;
+    left: 100px;
+    transform: translate(0, -50%);
+    line-height: 1;
+    font-size: 25px;
+
+}
+
+.wrap2 header h1 b {
+    display: block;
+    line-height: 1;
+    font-size: 40px;
+}
+
+/*카트*/
+.wrap2 .cart {
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.cart2 span {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    ;
+    background: rgba(72, 70, 70, 0.9);
+}
+
+
+
+
+/*메뉴부분*/
+.nav2wrap {
+    width: 400px;
+    padding: 50px 100px;
+    float: left;
+}
+
+
+.allmenu {
+    text-transform: capitalize;
+    padding-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.nav2wrap .allmenu > a:first-child {
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px 0;
+    display: block;
+    position: relative;
+}
+
+.nav2wrap .allmenu > a:first-child img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.nav2wrap .allmenu dt {
+    font-size: 21px;
+    font-weight: 600;
+    padding: 5px 0;
+
+}
+
+.nav2wrap .allmenu dl {
+    padding-top: 25px;
+}
+
+.nav2wrap .allmenu dd {
+    font-size: 17px;
+    padding: 5px 0;
+    font-weight: 500;
+    color: rgba(28, 27, 27, 0.74);
+}
+
+/*아이템리스트*/
+
+.itemlist {
+    float: left;
+    width: calc(100% - 400px);
+    padding: 50px;
+    padding-right: 100px;
+
+
+}
+
+.itemlist h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    border-bottom: 1px solid;
+    padding: 50px;
+    padding-top: 0;
+}
+
+.itemwrap {
+    padding: 50px 0;
+}
+
+.itemwrap li {
+    width: 25%;
+    padding: 2%;
+}
+
+/*푸터*/
+
+
+
+.wrap2 .footer {
+    padding-top: 100px;
+    clear: both;
+}

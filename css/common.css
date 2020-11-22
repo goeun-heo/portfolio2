@@ -50,12 +50,12 @@ h8 {
     font-weight: normal;
 }
 
-
+h1:hover{letter-spacing:0.5px; }
+h1{letter-spacing:-1px;transition: .8s}
 h3 {
     font-size: 20px;
     font-weight: 300;
-}
-
+}6
 h2 {
     font-size: 30px;
     font-weight: 300;
@@ -109,7 +109,7 @@ a {
     clear: both;
 }
 
-.warp {
+.wrap {
     width: 100%;
     height: 100%;
 
@@ -122,14 +122,25 @@ a {
     padding: 10px;
     width: 250px;
     text-align: center;
+	cursor: pointer;
+	transition: .4s;
+}
+.section4 .linesbtn:hover{
+	background: #fff;
+	color:#000;
 }
 
+.linesbtn:hover{
+	background: #1c1b1b;
+	color:#fff;
+}
 .close {
     z-index: 30;
     height: 35px;
     width: 35px;
     display: block;
     position: relative;
+	cursor: pointer;
 }
 
 .close::before {
@@ -191,7 +202,7 @@ header h1{position: absolute; left: 50%;top: 50%;transform: translate(-50%,-50%)
     top: 50px;
     right: 200px;
 }
-.cart img{width: 32px;}
+.cart img{width: 32px;cursor: pointer;}
 
 .toggle {
     z-index: 70;
@@ -199,6 +210,7 @@ header h1{position: absolute; left: 50%;top: 50%;transform: translate(-50%,-50%)
     top: 50px;
     right: 100px;
     transition: .3s;
+	cursor: pointer
 }
 .toggle:hover {
    opacity: .4;
@@ -292,7 +304,7 @@ header h1{position: absolute; left: 50%;top: 50%;transform: translate(-50%,-50%)
 
 
 /*메뉴부분*/
-.navwarp {
+.navwrap {
     position: fixed;
     top: 0;
     left: 0;
@@ -306,17 +318,17 @@ header h1{position: absolute; left: 50%;top: 50%;transform: translate(-50%,-50%)
     z-index: -1;
 }
 
-.navwarp.on {
+.navwrap.on {
     opacity: 1;
     z-index: 20;
 }
 
-.navwarp nav {
+.navwrap nav {
     background: #fff;
     width: 724px;
     max-width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -325,7 +337,6 @@ header h1{position: absolute; left: 50%;top: 50%;transform: translate(-50%,-50%)
 }
 
 .search {
-    margin-top: 50px;
     height: 80px;
     border-bottom: 2px solid #1c1b1b;
     position: relative;
@@ -374,7 +385,7 @@ header h1{position: absolute; left: 50%;top: 50%;transform: translate(-50%,-50%)
 
 .allmenu {
     text-transform: capitalize;
-    padding-top: 30px;
+    padding-top: 20px;
     position: relative;
     overflow: hidden;
 }
@@ -412,11 +423,13 @@ header h1{position: absolute; left: 50%;top: 50%;transform: translate(-50%,-50%)
 
 .allmenu a:hover {
     opacity: .4;
+     letter-spacing: 0.5px;
 }
 
 .allmenu a {
     transition: .3s;
     opacity: .9;
+    letter-spacing: -0.5px;
 }
 
 .menu1 {
@@ -430,7 +443,7 @@ header h1{position: absolute; left: 50%;top: 50%;transform: translate(-50%,-50%)
 }
 
 /*카트미리보기*/
-#cartwarp {
+#cartwrap {
     position: fixed;
     top: 0;
     left: 0;
@@ -444,7 +457,7 @@ header h1{position: absolute; left: 50%;top: 50%;transform: translate(-50%,-50%)
     z-index: -1;
 }
 
-#cartwarp.on {
+#cartwrap.on {
     opacity: 1;
     z-index: 90;
 }
